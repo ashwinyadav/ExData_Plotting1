@@ -13,8 +13,9 @@ plotData$Date <- as.Date(plotData$Date, format = "%d/%m/%Y")
 plotData$Time <- as.POSIXct(plotData$Time, format = "%d/%m/%Y %H:%M:%S")
 
 ## plot histogram of Global Active Power
+par(bg = "white")
 with(plotData, hist(Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power"))
 
 ## save PNG file
-dev.copy(png, file = "plot1.png", width = 480, height = 480)
+dev.copy(png, file = "plot1.png", width = 480, height = 480, bg = "white")
 dev.off()

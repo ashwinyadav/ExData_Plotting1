@@ -13,6 +13,7 @@ plotData$Date <- as.Date(plotData$Date, format = "%d/%m/%Y")
 plotData$Time <- as.POSIXct(plotData$Time, format = "%d/%m/%Y %H:%M:%S")
 
 ## plot Global Active Power by day
+par(bg = "white")
 with(plotData, plot(x = Time, y = Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l"))
 
 ## save PNG file

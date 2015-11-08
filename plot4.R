@@ -13,7 +13,7 @@ plotData$Date <- as.Date(plotData$Date, format = "%d/%m/%Y")
 plotData$Time <- as.POSIXct(plotData$Time, format = "%d/%m/%Y %H:%M:%S")
 
 ## plot 4 combination charts 
-par(mfrow = c(2,2), mar = c(4,4,1,1))
+par(mfrow = c(2,2), mar = c(4,4,1,1), bg = "white")
 with(plotData, plot(x = Time, y = Global_active_power, type = "l", ylab = "Global Active Power"))
 with(plotData, plot(x = Time, y = Voltage, type = "l", ylab = "Voltage", xlab = "datetime"))
 with(plotData, plot(x = Time, y = Sub_metering_1, ylab = "Energy sub metering", xlab = "", type = "l"))

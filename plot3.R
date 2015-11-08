@@ -13,6 +13,7 @@ plotData$Date <- as.Date(plotData$Date, format = "%d/%m/%Y")
 plotData$Time <- as.POSIXct(plotData$Time, format = "%d/%m/%Y %H:%M:%S")
 
 ## plot Energy Sub Metering 1,2 and 3 by Day on screen
+par(bg = "white")
 with(plotData, plot(x = Time, y = Sub_metering_1, ylab = "Energy sub metering", xlab = "", type = "l"))
 with(plotData, points(x = Time, y = Sub_metering_2, type = "l", col = "red"))
 with(plotData, points(x = Time, y = Sub_metering_3, type = "l", col = "blue"))
